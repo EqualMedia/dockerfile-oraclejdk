@@ -2,7 +2,7 @@
 FROM fedora:20
 
 RUN yum update -y -q; yum clean all
-RUN yum install -y wget unzip; yum clean all
+RUN yum install -y wget unzip git; yum clean all
 
 RUN export RPM_URL=http://download.oracle.com/otn-pub/java/jdk/7u65-b17/jdk-7u65-linux-x64.rpm; \
   wget -q --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" $RPM_URL; \
