@@ -17,7 +17,7 @@ RUN export GRADLE_ZIP_URL=https://services.gradle.org/distributions/gradle-2.3-b
   rm $(basename ${GRADLE_ZIP_URL}) && \
   ln -s /gradle/bin/gradle /usr/bin/gradle
 
-RUN export MAVEN_ZIP_URL=http://www.mirrorservice.org/sites/ftp.apache.org/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.zip && \
+RUN export MAVEN_ZIP_URL=http://www.mirrorservice.org/sites/ftp.apache.org/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.zip && \
   wget -q ${MAVEN_ZIP_URL} && \
   unzip -q $(basename ${MAVEN_ZIP_URL}) && \
   mv $(basename ${MAVEN_ZIP_URL} | sed 's/-bin\.zip$//') apache-maven && \
