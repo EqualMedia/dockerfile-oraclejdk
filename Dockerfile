@@ -10,7 +10,7 @@ RUN export RPM_URL=https://s3.amazonaws.com/state-dev-public-mirror-us-east-1/ja
   yum clean all && \
   rm java.rpm
 
-RUN export GRADLE_ZIP_URL=https://services.gradle.org/distributions/gradle-2.1-bin.zip && \
+RUN export GRADLE_ZIP_URL=https://services.gradle.org/distributions/gradle-2.3-bin.zip && \
   wget -q ${GRADLE_ZIP_URL} && \
   unzip -q $(basename ${GRADLE_ZIP_URL}) && \
   mv $(basename ${GRADLE_ZIP_URL} | sed 's/-bin\.zip$//') gradle && \
