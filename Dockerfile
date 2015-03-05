@@ -1,5 +1,5 @@
 # Docker base image with Oracle Java JDK
-FROM fedora:20
+FROM fedora:21
 
 RUN yum update -y -q && yum clean all
 RUN yum install -y wget unzip git && yum clean all
