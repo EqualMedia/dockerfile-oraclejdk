@@ -2,7 +2,7 @@
 FROM fedora:21
 
 RUN yum update -y -q && yum clean all
-RUN yum install -y wget unzip git sudo && yum clean all
+RUN yum install -y wget unzip git sudo tar && yum clean all
 
 RUN export RPM_URL=https://s3.amazonaws.com/state-dev-public-mirror-us-east-1/java/jdk-8u40-linux-x64.rpm && \
   yum install -y $RPM_URL && \
