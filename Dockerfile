@@ -2,10 +2,10 @@
 FROM fedora:21
 
 RUN yum update -y -q && yum clean all
-RUN yum install -y wget unzip git && yum clean all
+RUN yum install -y wget unzip git sudo && yum clean all
 
 RUN export RPM_URL=https://s3.amazonaws.com/state-dev-public-mirror-us-east-1/java/jdk-8u40-linux-x64.rpm && \
-  yum localinstall -y $RPM_URL && \
+  yum install -y $RPM_URL && \
   yum clean all
 
 RUN export GRADLE_ZIP_URL=https://services.gradle.org/distributions/gradle-2.3-bin.zip && \
